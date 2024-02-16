@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: #10161B;
+}
+
+.header {
+  background-color: rgb(25, 185, 33);
+  height: 55px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  justify-content: space-between;
+  position: sticky;
+  z-index: 5;
+  top: 0px;
+}
+
+.nav-icon > img {
+  width: 55px;
+  height: 55px;
+}
+
+.hamburg {
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburg > span {
+  width: 100%;
+  height: 4px;
+  background-color: #ffffff;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+.nav-menu > ul {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+}
+
+.nav-menu > ul > a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-menu > ul > a:hover {
+  color: black;
+}
+
+.nav-menu > ul > .active {
+  border-bottom: 2px solid rgb(111, 237, 14);
+  transform: scale(1.2);
+  padding-bottom: 1px;
+}
+
+.nav-menu > ul > a > li {
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 20px;
+  
+}
+.hide-menu {
+  display: none;
+}
+
+.nav-button {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.log-sign-link {
+  text-decoration: none;
+  color: white;
+}
+
+.login-btn:disabled, .signup-btn:disabled, .logout-btn:disabled {
+  display: none;
+}
+
+.login-btn:active, .signup-btn:active, .logout-btn:active {
+  outline: none;
+}
+
+.login-btn {
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    #09e083 0,
+    #1a7624c6 100%
+  );
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(44, 105, 68, 0.3) 0 7px 13px -3px,
+    rgba(47, 98, 77, 0.5) 0 -3px 0 inset;
+}
+
+.logout-btn {
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    #ec4811 0,
+    #f10b48c6 100%
+  );
+  box-shadow: rgba(238, 44, 18, 0.4) 0 2px 4px,
+    rgba(225, 78, 10, 0.3) 0 7px 13px -3px,
+    rgba(244, 86, 6, 0.5) 0 -3px 0 inset;
+}
+
+.signup-btn {
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    #5adaff 0,
+    #5468ff 100%
+  );
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+}
+
+/* login logout signup button common property */
+
+.login-btn, .signup-btn, .logout-btn {
+  align-items: center;
+  appearance: none;
+  border: 0;
+  border-radius: 6px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 33px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+}
+
+/* login button  */
+
+.login-btn:focus {
+  box-shadow: #3ce052 0 0 0 1.5px inset, rgba(22, 93, 54, 0.4) 0 2px 4px,
+    rgba(35, 66, 37, 0.3) 0 7px 13px -3px, #4ce03c 0 -3px 0 inset;
+}
+
+.login-btn:hover {
+  box-shadow: rgba(35, 66, 48, 0.4) 0 4px 8px,
+    rgba(37, 66, 35, 0.3) 0 7px 13px -3px, #3fe03c 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.login-btn:active {
+  box-shadow: #44e03c 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+/* logout button  */
+
+.logout-btn:focus {
+  box-shadow: #ec3908 0 0 0 1.5px inset, rgba(234, 49, 16, 0.4) 0 2px 4px,
+    rgba(240, 62, 8, 0.3) 0 7px 13px -3px, #fc280c 0 -3px 0 inset;
+}
+
+.logout-btn:hover {
+  box-shadow: rgba(237, 24, 9, 0.4) 0 4px 8px,
+    rgba(242, 40, 4, 0.3) 0 7px 13px -3px, #e82b09 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.logout-btn:active {
+  box-shadow: #ee1b0b 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+/* signup button */
+
+.signup-btn:focus {
+  box-shadow: #3c5ae0 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.signup-btn:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.signup-btn:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+/* scrollbar */
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(41, 39, 39);
+  border-radius: 30px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: black;
+}
